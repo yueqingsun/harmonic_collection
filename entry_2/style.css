@@ -1,6 +1,10 @@
 *{
     line-height: 30px;
-    color: rgb(49, 3, 3);
+    color:beige;
+}
+
+body{
+    background-color: rgb(53, 48, 48);
 }
 
 #newmoon{
@@ -61,7 +65,7 @@ ol li{
     width: 700px;
     margin: 5px bold;
 
-    background-color: rgba(255, 175, 175, 0.493);
+    background-color: rgba(243, 171, 171, 0.596);
 }
 
 #date1{
