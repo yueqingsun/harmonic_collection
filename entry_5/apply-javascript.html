@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Third Quarter</title>
+  </head>
+  
+
+  <div>
+    <h1 id="title">RaiN</h1>
+    <h2 id="subtitle">Something under the street lamps...</h2>
+  </div>
+  
+  <style>
+    body{
+        background-image: url("background.jpg");
+        background-repeat: repeat;
+        background-size:cover;
+        background-attachment: fixed;
+        background-position: center;
+        height:100vh;
+        overflow:hidden;
+    }
+
+    </style>
+    <body>
+        <div class="text" id="first">
+            <h3>03/10/3202</h3>
+            <a herf="#">
+                <ol>
+                    <li>Go to a place full of Chinese people, failed. Watch out for the people across the street.</li>
+                    <li>Something you've been preparing for a long time is finally legal.</li>
+                    <li>The smell of RaiN is unfamiliar.</li>
+                    <li>Don't abuse yourself. It can be painful.</li>
+                    <li>Something's moldy. Throw it away.</li>
+                    <li>Blue hair appears.</li>
+                </ol>
+            </a>
+        </div>
+        
+        <div class="text" id="second">
+            <h3>62/20/3202</h3>
+            <a herf="#">
+                <ol>
+                    <li>Someone has come from far away to see you. There's no need for RaiN today.</li>
+                    <li>She's infected with something. There's no need to panic.</li>
+                    <li>You are about to fully adapt to this society. Four days countdown. But you made a stupid mistake, but it hasn't been a problem for almost six months.</li>
+                    <li>You haven't seen him in a while. It's nice, but it's a shock.</li>
+                    <li>Don't spray RaiN.</li>
+                </ol>
+            </a>
+        </div>
+
+        <div class="text" id="third">
+            <h3>20/30/3202</h3>
+            <a herf="#">
+                <ol>
+                    <li>A lot of good things today.</li>
+                    <li>Get out of this miserable place. RaiN isn't with you, but it's always there, you just don't notice it.</li>
+                    <li>Long lost happiness? Yes, but only for a limited time.</li>
+                    <li>Don't be sad about a day you don't want to experience again, but it will haunt you for a long time.</li>
+                    <li>The dead is raised.</li>
+                </ol>
+            </a>
+        </div>
+
+        <div class="text" id="forth">
+            <h3>72/30/3202</h3>
+            <a herf="#">
+                <ol>
+                    <li>Someone left. It was sudden. She will continue to visit you from time to time.</li>
+                    <li>Don't worry about waiting in line with cars, you're stronger than everyone else.</li>
+                    <li>RaiN is out of place. Go find MIrAcLe.</li>
+                    <li>Changing time and space is difficult and takes a long way to reach. This is supposed to be fun. Try to adjust. You're important to everyone.</li>
+                    <li>MIrAcLe is getting heavier.</li>
+                    <li>The shopkeeper across the street is a very interesting person. Try to talk to him, even if it won't result in a monetary transaction.</li>
+                </ol>
+            </a>
+        </div>
+    </body>
+
+    <script>
+        document.querySelector('body').addEventListener('mousemove',(e)=>{
+            e.currentTarget.style.setProperty('--x',`${e.clientX}px`);
+            e.currentTarget.style.setProperty('--y',`${e.clientY}px`);
+        });
+
+        function setLinksPositions(){
+            document.querySelectorAll('a').forEach((a)=>{
+                const bounding = a.getBoundingClientRect();
+
+                a. style.setProperty('--positionX',`${bounding.x}px`);
+                a. style.setProperty('--positionY',`${bounding.y}px`);
+            });
+        }
+
+        window.addEventListener('load',setLinksPositions);
+        window.addEventListener('resize',setLinksPositions);
+    </script>
