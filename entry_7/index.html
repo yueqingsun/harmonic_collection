@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Third Quarter</title>
+  </head>
+
+  <style>
+    body{
+        background-image: url("bg.jpg");
+        background-repeat: repeat;
+        background-size:cover;
+        background-attachment: fixed;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 40vw; /* 设置最大宽度，根据需要进行调整 */
+        font-size: 1.5vw;
+        color:rgb(250, 215, 215);
+        display: inline-block;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        overflow-wrap: break-word; /* 设置文本自动换行 */
+
+
+        position: absolute;
+        z-index: index 2; 
+        color: rgb(29, 61, 131);
+        font-size: 2vw;
+        text-shadow:-2px -2px 0px rgb(255, 255, 255), 2px -2px 0px rgb(255, 255, 255), -2px 2px 0px rgb(255, 255, 255), 2px 2px 0px rgb(255, 255, 255);
+        
+        position:fixed;
+        top:30vh;
+        left:30vw;
+    }
+
+  
+  </style>
+
+
+  <body>
+    <div class="center">
+      <div class="random-phrase"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+  <script>
+   var randomPhrases = [
+  "You have new spACe and start to get anxious. It's hard to control. It's totally uncontrollable.51/40/3202",
+  "Tired.51/40/3202",
+  "The Sprint.11/50/3202",
+  "You look very small among the giants. Don't worry, being physically small doesn't mean being mentally small.11/50/3202",
+  "Been thinking about MIrAcLe lately. The rAIn hasn't appeared yet.11/50/3202",
+  "It's nice to get out of this place of pain and beauty and get into a space of transition. Inexplicable like the long pause into the transition space, probably the stability brought by the slight vibration of the driving.71/50/3202",
+  "MIrAcLe appears.71/50/3202",
+  "A new man.13/50/3202",
+  "Having meaningless meetings every day. Just regret that don't meet rAIn currently. I really want to see rAIn every day, why not... It's like someone's blocking it, but it's not a problem at all.13/50/3202",
+  "Very hard bed. Is this a bed? It's gonna get worse.13/50/3202",
+  "You think you are going to see a dead man joke, but you seem to have realized what's going to happen after this.90/60/3202",
+  "You're not very good at hiding emotions, so it causes a lot of pain. 40% comes from your own contradictions, and 60% comes from the incomprehension and lack of communication of people around you.90/60/3202",
+  "Met good creatures. Don't resist meeting them, they won't do anything, but they're really nice.81/60/3202",
+  "A few rainy days, not quite as expected. Run.21/70/3202",
+  "Run.21/70/3202",
+  "It's gonna be deserted for a while. Being outnumbered and watched by people close to you, losing your freedom feels bad, and maybe life is telling you the right things.21/70/3202",
+  "Fall in lOvE.61/70/3202",
+  "Finally meet rAIn. You're excited. Relatively speaking, this is your domain.10/80/3202",
+  "Unexpected temperature.10/80/3202",
+  "You think about him all the time, because the rAIn is his space. Too bad he hasn't been using rAIn lately.10/80/3202",
+  "rAIn changes the way some people treat you. It was a question, now it's a belated agreement, and I don't know if they regret it.10/80/3202",
+  
+  // 添加更多的随机话语
+];
+
+var clickCount = 0; // 用于跟踪点击次数
+
+document.addEventListener("click", function () {
+  clickCount++;
+
+  if (clickCount <= 25) {
+    // 显示随机话语
+    var randomIndex = Math.floor(Math.random() * randomPhrases.length);
+    var randomPhrase = randomPhrases[randomIndex];
+    var phraseElement = document.createElement("div");
+    phraseElement.textContent = randomPhrase;
+    document.body.innerHTML = ''; // 清空页面上的旧话语
+    document.body.appendChild(phraseElement);
+  } else if (clickCount === 26) {
+    // 第五次点击后清空页面并重置点击次数
+    document.body.innerHTML = '';
+    clickCount = 0;
+  }
+});
+
+window.addEventListener('resize', function() {
+    var html = document.getElementsByTagName('html')[0];
+    var width = window.innerWidth;
+    html.style.fontSize = width / 44 + 'px';
+    });
+
+</script>
