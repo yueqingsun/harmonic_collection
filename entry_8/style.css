@@ -1,0 +1,54 @@
+#sentence{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    min-height:56.25vw;
+    background-color: rgba(173, 216, 230, 0);
+    text-align: center;
+    max-width: 101%;
+    font-size: 1.5vw;
+    line-height: 1.5; /* 控制行间距 */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(0, 2, 141)
+    
+  }
+ 
+  /* styles.css */
+
+ 
+  .circle {
+    width: 34.3vw;
+    height: 34.3vw;
+    background-color: rgba(31, 18, 88, 0.623);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -2; /* 设置较大的z-index值 */
+    top:3.2vw;
+    mix-blend-mode: multiply;
+
+  }
+  
+#moon{
+    position: absolute;
+    z-index: -3;
+    position:fixed;
+    top: -2.8vw;
+    left:-1px;
+    position:fixed;
+    width:100vw;
+    min-height:56.25vw;
+
+}
+#bg{
+    position: absolute;
+    z-index: -1;
+    position:fixed;
+    top: -2.8vw;
+    left:-1px;
+    position:fixed;
+    width:100vw;
+    min-height:56.25vw;
+
+}
