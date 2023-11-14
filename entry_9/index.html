@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waning Gibbous</title>
+        <link rel="stylesheet" href="../style/reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+  <style>
+        body {
+      margin: 0;
+      overflow: hidden;
+      height:1200vw;
+      background-color: rgb(27,79,155);
+    }
+
+    #movingImage {
+      position: absolute;
+      z-index: -2;
+      width:100vw;
+      min-height: 675vw; 
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+  </style>
+</head>
+<body>
+
+<div>
+    <div id="sentence-container">
+        <div id="sentence"></div>
+    </div>
+
+  <img id="movingImage" src="bg.jpg" alt="Your Image">
+
+  <script src="script.js"></script>
+  
+  <script>
+    var movingImage = document.getElementById('movingImage');
+    var totalImageHeight = movingImage.naturalHeight; // 你的图片的总高度
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
+  
+    document.addEventListener('mousemove', function(event) {
+      var mouseY = event.clientY;
+  
+      // 计算鼠标在视窗中的相对位置
+      var relativeMouseY = mouseY / windowHeight;
+  
+      // 计算图片的新位置
+      var newTop = -relativeMouseY * totalImageHeight ;
+
+      var ratio = windowHeight/windowWidth;
+  
+      // 设置图片的新位置
+      movingImage.style.top = newTop*(ratio*12/8) + 'px';
+    });
+  </script>
+  
+
+</body>
+
+
+</html>
