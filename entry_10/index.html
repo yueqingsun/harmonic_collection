@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waning Crescent</title>
+    <style>
+        /* 样式表中定义四个不同的背景 */
+        body {
+            margin: 0; /* 移除默认的body边距 */
+            background-size: cover; /* 背景图占满整个页面 */
+            background-repeat: no-repeat;            
+            background-color: #ae2626;
+            overflow: hidden;
+        }
+
+        #background1 {
+            background-image: url('bg1.jpg'); /* 换成你的第一个背景图片路径 */
+        }
+
+        #background2 {
+            background-image: url('bg2.jpg'); /* 换成你的第二个背景图片路径 */
+        }
+
+        #background3 {
+            background-image: url('bg3.jpg'); /* 换成你的第三个背景图片路径 */
+        }
+
+        #background4 {
+            background-image: url('bg4.jpg'); /* 换成你的第四个背景图片路径 */
+        }
+
+        /* 设置默认显示的背景 */
+        .background-container {
+            display: none;
+            height:102vh;
+            margin-top: -8vh;
+            background-size: cover; /* 确保背景图填充整个容器 */
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .background-container.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 按钮样式 */
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            
+        }
+
+        /* 图片样式 */
+        button img {
+            width: 80px; /* 设置图片宽度 */
+            height: 80px; /* 设置图片高度 */
+        }
+
+        p{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <!-- 按钮用于切换背景，每个按钮都是一张图片 -->
+    <button onclick="changeBackground(1)"><img src="bt1.png" alt="MIrAcLe" id="bt1"></button>
+    <button onclick="changeBackground(2)"><img src="bt2.png" alt="DrEAm" id="bt2"></button>
+    <button onclick="changeBackground(3)"><img src="bt3.png" alt="RaiN" id="bt3"></button>
+    <button onclick="changeBackground(4)"><img src="bt4.png" alt="rAIn" id="bt4"></button>
+
+    <!-- 四个不同的背景容器 -->
+    <div id="background1" class="background-container active">
+        <a href="https://yueqingsun.github.io/harmonic_collection/entry_2/"><h1>MIrAcLe</h1></a>
+        <h2>Space1/Time1</h2>
+        <p>Very strange rose smell.</p>
+        <p>The smell of high school I don't want to remember.</p>
+        <p>Does it smell bad?</p>
+        <p>It doesn't belong to you, but it becomes your rare favorite.</p>
+        <p>Want to find it again in another space and time.</p>
+        <p>Don't hate it.</p>
+        <p>......</p>
+        <p>     </p>
+        <p>     </p>
+        <p>     </p>
+        <!-- 这里放置你的第一个界面的内容 -->
+    </div>
+
+    <div id="background2" class="background-container">
+        <a href="https://yueqingsun.github.io/harmonic_collection/entry_4/"><h1>DrEAm</h1></a>
+        <h2>Space2/Time2</h2>
+        <p>The candy entered the nasal cavity, and soon disappeared.</p>
+        <p>It doesn't smell like the house, but it smells like the house.</p>
+        <p>So sweet.</p>
+        <p>Spray to meet the person you like, the person you like won't show up.</p>
+        <p>Surprise meeting, painful beginning, dull ending.</p>
+        <p>Not in keeping with the temperament.</p>
+        <p>......</p>
+        <p>     </p>
+        <p>     </p>
+        <p>     </p>
+        <!-- 这里放置你的第二个界面的内容 -->
+    </div>
+
+    <div id="background3" class="background-container">
+        <a href="https://yueqingsun.github.io/harmonic_collection/entry_5/"><h1>RaiN</h1></a>
+        <h2>Space2/Time2</h2>
+        <p>Mix the dirt and grass in a blender after it rains.</p>
+        <p>You bought it from someone who didn't know you.</p>
+        <p>Go buy the most expensive package.</p>
+        <p>I was dizzy, and now I'm not dizzy.</p>
+        <p>You used it to cover up some unpleasant smell. This is even worse.</p> 
+        <p>If only it was a scent diffuser.</p>
+        <p>......</p>
+        <p>     </p>
+        <p>     </p>
+        <p>     </p>
+        <!-- 这里放置你的第三个界面的内容 -->
+    </div>
+
+    <div id="background4" class="background-container">
+        <a href="https://yueqingsun.github.io/harmonic_collection/entry_7/"><h1>rAIn</h1></a>
+        <h2>Space3/Time1</h2>
+        <p>Like RaiN? Not at all.</p>
+        <p>Bought on a whim, but it was planned for a long time.</p>
+        <p>Perfume without memory. Don't provide memories.</p>
+        <p>It seems to be the only thing that exists as an object rather than an odor.</p>
+        <p>So far, it seems to be producing good results.</p>
+        <p>It evaporated. Please pay more attention to it.</p>
+        <p>......</p>
+        <p>     </p>
+        <p>     </p>
+        <p>     </p>
+        <!-- 这里放置你的第四个界面的内容 -->
+    </div>
+
+    <script>
+        function changeBackground(index) {
+            // 将所有背景容器的类都移除，然后给指定的容器添加 active 类
+            for (let i = 1; i <= 4; i++) {
+                const container = document.getElementById('background' + i);
+                container.classList.remove('active');
+            }
+
+            const selectedContainer = document.getElementById('background' + index);
+            selectedContainer.classList.add('active');
+        }
+    </script>
+</body>
+</html>
