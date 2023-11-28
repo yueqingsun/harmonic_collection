@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>First Quarter</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                height:100vh;
+                display:flex;
+                align-items:center;
+                align-content: center;
+                justify-content: center;
+                background-color: black;
+                background-image: url("bg.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                
+            }
+            .text{
+                font-size: 28px;
+                color:aliceblue;
+                text-shadow: 2px 2px 2px rgb(6, 65, 175);
+                
+            }
+            .text .guangbiao{
+                color:aliceblue;
+                animation: flash 0.3s linear infinite;
+            }
+            @keyframes flash{
+                from{
+                    opacity:0;
+                }
+                to{
+                    opacity:1;
+                }
+            }
+        </style> 
+    </head>
+
+    <body>
+        <div class="text">
+            <span class="word">
+                
+            </span>
+            <span class="guangbiao">|</span>
+        </div>
+        
+        <script>
+            const word = document.querySelector('.word');
+            const paragraphs =[
+                "*You don't need to de anything. Just read till......*",
+                "**This is your last day here. The rest has not yet happened, please read the following carefully to ensure that you can survive. Wish me in the future will have a happy journey**",
+                "***",
+                "01. Spray MIrAcLe on the way out of here, a little more. Don't know when you caught the habit of wearing perfume, don't struggle.",
+                "02. Someone will ask you questions before you hit the road.",
+                "03. Follow the driver in red, caution, in red.",
+                "04. There's a bus waiting for you out front. It's crowded. Go find a corner seat.",
+                "05. On the only part of the road heading east you will meet the only moon as this big in your life. After this part of the road, do not try to find the moon anymore. Be sure to remember this moonrise.",
+                "06. If you feel pain in your face, hold it back, ignore it, and don't touch it.",
+                "07. No matter what happens, don't cry.",
+                "***",
+                "11. Follow the crowd and they will take you where you need to go.",
+                "12. Don't look back. Don't go back",
+                "13. Go to the line on the far right, there will be someone waiting for you, even though you don't know her.",
+                "14. The smell of MIrAcLe is much lighter. Your nose is fine. ",
+                "15. When the smell of MIrAcLe is exactly half gone, you will gain an extra twelve hours. Keep your chin up. Look after the people around you.",
+                "16. Don't go to the shortcut. You can't get through, but someone will help you soon. This was unexpected.",
+                "17. You can't drink water.",
+                "18. Go to the man in blue and wait for the new bus, which is blue, not red.",
+                "19. The journey will be more crowded, do not leave your seat. If someone walks up to you with a liquid, don't make eye contact with it.",
+                "***",
+                "21. You will have forty-eight hours of darkness.",
+                "22. You see MIrAcLe again in an unexpected place, but this is different.",
+                "23. Resist. Don't look for him.",
+                "24. Someone doesn't like MIrAcLe. Ignore him. He's strange.",
+                "25. Remember to turn off your phone at 11 p.m. every night.",
+                "26. MIrAcLe has been around longer than you think, and its meaning has slowly changed.",
+                "**Enjoy**",
+                "*......*",
+
+            ]
+            
+            function showParagraphs() {
+            let currentIndex = 0;
+
+            function showNextParagraph() {
+                if (currentIndex < paragraphs.length) {
+                const currentText = paragraphs[currentIndex];
+                for (let i = 1; i <= currentText.length; i++) {
+                    setTimeout(function () {
+                    word.innerHTML = currentText.substr(0, i);
+                    }, (i - 1) * 65);
+                }
+                currentIndex++;
+                // 在当前段落显示完成后等待一段时间再显示下一段
+                setTimeout(showNextParagraph, currentText.length * 100 + 800);
+                }
+            }
+
+            // 调用函数开始显示所有段落
+            showNextParagraph();
+            }
+
+            // 调用函数开始显示所有段落
+            showParagraphs();
+
+        </script>
+
+
+    </body>
