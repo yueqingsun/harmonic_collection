@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ScentLoverKwaidan</title>
+        <title>Waxing Crescent</title>
     </head>
-    <body>
-        <h1>CoAChDReAm</h1>
-        <p>This is my favorite perfume. Please do not be obsessed with it.</p>
+
+<style>
+    ol{
+        font-size: larger;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color:rgb(255, 255, 255)
+    }
+
+    h2{
+        color:rgb(0, 102, 255);  
+        animation: floatAnimation2 2s ease-in-out infinite alternate;
+    }
+
+    p{
+        color:white;
+    }
+
+    h1{
+        color:white;
+    }
+
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(10px);
+        }
+    }
+
+    fieldset{
+        color:rgb(224, 61, 61)
+    }
+#hpbt{
+    position:absolute;
+    z-index: 2;
+    position:fixed;
+    top:0vh;
+    left:0vw;
+    animation: floatAnimation1 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation1 {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(-5px);
+}
+}
+</style>
+
+
+<button onclick><a href="https://yueqingsun.github.io/harmonic_collection/ScentWeirdTalk/" title="homepage"><img src="hpbt.png" id="hpbt"></a></button>
+    <body position:absolute; z-index:2>
+        <h1>***</h1>
+        <p>*** are your favorite perfumes. Please do not be obsessed with it.</p>
         <p>*From now on, follow all the rules*</p>
 
         <fieldset>
-            <legend>DReAm</legend>
+            <legend>涓嶈涔板畠</legend>
             <h2>Before You Buy</h2>
             <ol>
                 <li>Don't search this perfume online. Go to the store.</li>
                 <li>Don't take a perfume test strip to the perfume store. If someone comes to you with a test strip, run to the door of the store.</li>
-                <a href="https://images.coach.com/is/image/Coach/b1085_l38_a7">Dream</a>
                 <li>The real DReAm perfume can be smelled from three meters away. If you can only smell it within a metre, keep away from the perfume</li>
                 <li>There is a moving carriage wagon on the perfume bottle, and there are two people in each wagon. Don't stop them.</li>
                 <li>When you pay for it, remember to lick it.</li>
@@ -24,12 +77,11 @@
         </fieldset>
 
         <fieldset>
-            <legend>drEaM</legend>
+            <legend>蹇墧鎺夊畠</legend>
             <h2>After You Buy</h2>
             <ol>
                 <li>Within two hours of the perfume entering your home, stop the carriage wagon and the people.</li>
                 <li>If it rains heavily at 9.58 p.m., be sure to spray 4 doses of drEaM perfume in the room.</li>
-                <a href="https://www.lmching.com/cdn/shop/files/coach-dreams-sunset-eau-de-parfum-40ml-lmching-group-limited-3_540x.jpg?v=1687796428">Dream</a>
                 <li>Don't wear drEaM perfume when you go to Flushing. You won't see who you want to see.</li>
                 <li>If you laugh five times in one day, the perfume will become sad five months later.</li>
                 <li>Keep aware of the perfume when the perfume is awake.</li>
@@ -39,11 +91,85 @@
             <footer>Be careful. Throw it away.</footer>
         </fieldset>
 
+        <fieldset>
+            <legend>鍋滄</legend>
+            <h2>When You Spray</h2>
+            <ol>
+                <li>Stay away from the water.</li>
+                <li>Looks like it could slip off. Watch out. If it slips, please don't tell anyone.</li>
+                <li>Squirt all over the interlayer. But if you use ****, you only need two sprays, remember, only two sprays.</li>
+                <li>Hair and perfume are incompatible.</li>
+                <li>Don't spray it with your eyes closed. Look at it, it gets scared.</li>
+            </ol>
+            <footer>Be careful. Throw it away.</footer>
+        </fieldset>
+
+        <fieldset>
+            <legend>鑷眰澶氱</legend>
+            <h2>When You Are Not Using</h2>
+            <ol>
+                <li>You have a lot of stuff, so there's very little room for perfume. Remember, don't put it on the shelf.</li>
+                <li>They collide.</li>
+                <li>They need to be crowded.</li>
+                <li>Your children will guard them.</li>
+                <li>Get used to the clatter. It won't be a problem.</li>
+                <li>They are very good.</li>
+            </ol>
+            <footer>Be careful. Keep eyes on them.</footer>
+        </fieldset>
+
         <div>
             <p>
                 *The above are purely fictitious. Please believe.*
             </p> 
         </div>
 
-    </body>
-</html>
+            <style>
+            body {
+                margin: 0;
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                background-color: white; /* 页面背景色，初始为白色 */
+                background-image: url('bg.png');
+                background-repeat: repeat;
+                background-size: cover;
+                transition: background-color 0.3s ease; /* 添加过渡效果 */
+            }
+        
+                #image {
+                    display: none; /* 隐藏图片 */
+                    width: 100vw;
+                    height: 100vh;
+                }
+            </style>
+        </head>
+        <body>
+            <img id="image" src="gradient1.jpg" alt="Your Image">
+        
+            <script>
+                var body = document.body;
+                var text = document.getElementById('text');
+                var image = document.getElementById('image');
+        
+                var canvas = document.createElement('canvas');
+                var ctx = canvas.getContext('2d');
+        
+                image.onload = function() {
+                    canvas.width = image.width;
+                    canvas.height = image.height;
+                    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                };
+        
+                body.addEventListener('mousemove', function(event) {
+                    var mouseX = event.clientX / window.innerWidth * canvas.width;
+                    var mouseY = event.clientY / window.innerHeight * canvas.height;
+        
+                    var pixel = ctx.getImageData(mouseX, mouseY, 1, 1).data;
+        
+                    body.style.backgroundColor = 'rgb(' + pixel[0] + ', ' + pixel[1] + ', ' + pixel[2] + ')';
+                });
+            </script>
+        </body>
+        </html>
+        

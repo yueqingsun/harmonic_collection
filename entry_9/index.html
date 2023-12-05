@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waning Gibbous</title>
+        <link rel="stylesheet" href="../style/reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+  <style>
+        body {
+      margin: 0;
+      overflow: hidden;
+      height:1200vw;
+      background-color: rgb(27,79,155);
+    }
+
+    #movingImage {
+      position: absolute;
+      z-index: -2;
+      width:100vw;
+      min-height: 675vw; 
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  #hpbt{
+    position:absolute;
+    z-index: 2;
+    position:fixed;
+    top:0vh;
+    left:0vw;
+    animation: floatAnimation1 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation1 {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(-5px);
+}
+}
+</style> 
+
+<body>
+<button onclick><a href="https://yueqingsun.github.io/harmonic_collection/ScentWeirdTalk/" title="homepage"><img src="hpbt.png" id="hpbt"></a></button>
+
+<div>
+    <div id="sentence-container">
+        <div id="sentence"></div>
+    </div>
+
+  <img id="movingImage" src="bg.jpg" alt="Your Image">
+
+  <script src="script.js"></script>
+  
+  <script>
+    var movingImage = document.getElementById('movingImage');
+    var totalImageHeight = movingImage.naturalHeight; // 你的图片的总高度
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
+  
+    document.addEventListener('mousemove', function(event) {
+      var mouseY = event.clientY;
+  
+      // 计算鼠标在视窗中的相对位置
+      var relativeMouseY = mouseY / windowHeight;
+  
+      // 计算图片的新位置
+      var newTop = -relativeMouseY * totalImageHeight ;
+
+      var ratio = windowHeight/windowWidth;
+  
+      // 设置图片的新位置
+      movingImage.style.top = newTop*(ratio*12/8) + 'px';
+    });
+  </script>
+  
+
+</body>
+
+
+</html>

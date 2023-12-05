@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waning Gibbous</title>
+        <link rel="stylesheet" href="../style/reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+  <style>
+    body{
+        overflow: hidden;
+        background-color: black;
+    }
+    #sentence-container {
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid rgb(0,0,0,0);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  #hpbt{
+    position:absolute;
+    z-index: 2;
+    position:fixed;
+    top:0vh;
+    left:0vw;
+    animation: floatAnimation1 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation1 {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(-5px);
+}
+}
+  </style>
+</head>
+<body>
+
+<button onclick><a href="https://yueqingsun.github.io/harmonic_collection/ScentWeirdTalk/" title="homepage"><img src="hpbt.png" id="hpbt"></a></button>
+<div>
+    <div class="circle" id="moving-circle"></div>   
+
+    <div id="sentence-container">
+        <div id="sentence"></div>
+    </div>
+
+    <img src="moon.png" id="moon">    
+    <img src="bgtransp.png" id="bg">
+
+  <script src="script.js"></script>
+</body>
+</html>
