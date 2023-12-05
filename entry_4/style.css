@@ -1,0 +1,64 @@
+.onclick{
+    font-size: 2vh;
+    font-weight: bold;
+    color:rgb(255, 0, 0);
+   
+}
+
+#one{
+    position:fixed;
+    left:50%;
+    top:20%; 
+    background-color: black;
+}
+
+#two{
+    position:fixed;
+    left:30%;
+    top:40%;
+    background-color: black;
+}
+
+#three{
+    position:fixed;
+    left:73%;
+    top:85%;
+    background-color: black;
+}
+
+#four{
+    position:fixed;
+    left:19%;
+    top:68%;
+    background-color: black;
+}
+
+#five{
+    position:fixed;
+    left:80%;
+    top:49%;
+    background-color: black;
+}
+#title{
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* 自定义最大宽度 */
+    max-height: 80%; /* 自定义最大高度 */
+    font-size: 10vh;
+    color:rgb(217, 228, 248);
+    font-family: 'Times New Roman', Times, serif;
+}
+#subtitle{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* 自定义最大宽度 */
+    max-height: 80%; /* 自定义最大高度 */
+    font-size: 4vh;
+    color:rgb(159, 192, 255);
+    text-shadow: 2px 2px rgb(116, 7, 7);
+    font-family: 'Times New Roman', Times, serif;
+}
